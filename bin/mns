@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+require 'aliyun/mns'
+
+Aliyun::Mns::Cli.start(ARGV)
