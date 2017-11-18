@@ -39,7 +39,7 @@ module Aliyun::Mns
 
     def send_message message, opts={}
       Request.post(messages_path) do |request|
-        # msg_options = {:DelaySeconds => 0, :Priority => 10}.merge(opts)
+        msg_options = {:DelaySeconds => 0, :Priority => 10}.merge(opts)
         request.content :Message, msg_options.merge(:MessageBody => message.to_s)
       end
     end
